@@ -1,10 +1,18 @@
-import Vue from 'vue'
+import { createApp } from 'vue';
 import App from './App.vue'
 import store from './store'
 
-Vue.config.productionTip = false
+import '@/assets/styles.css'
+import 'material-icons-font/material-icons-font.css'
 
-new Vue({
-  store,
-  render: h => h(App)
-}).$mount('#app')
+// Usage examples
+// <i class="material-icons">face</i>
+// <i class="material-icons md-48">face</i>
+// <i class="material-icons md-dark">face</i>
+// <i class="material-icons md-48 md-dark md-inactive">face</i>
+// <i class="material-icons md-light md-inactive">face</i>
+
+// List of icons
+// https://material.io/resources/icons/?style=baseline
+
+createApp(App).use(store).mount('#app')
