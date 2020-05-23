@@ -13,7 +13,6 @@
     "material-icons-font": "^2.0.0",
     "tailwindcss": "^1.4.6",
     "vue": "^3.0.0-beta.13",
-    "vue-touch": "^2.0.0-beta.4",
     "vuex": "^4.0.0-alpha.1"
   },
   "devDependencies": {
