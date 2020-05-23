@@ -4,7 +4,6 @@ export default Vuex.createStore({
   state: {
     production: true,
     editMode: false,
-    darkMode: false,
     changesSaved: true,
     userConfig: {
       groups: [

@@ -23,11 +23,6 @@ export default {
       input: '',
     }
   },
-  computed: {
-    config () {
-      return this.$store.state.userConfig
-    }
-  },
   mounted () {
     this.$refs.searchField.focus()
   },

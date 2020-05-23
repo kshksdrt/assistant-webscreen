@@ -94,9 +94,6 @@ export default {
     };
   },
   computed: {
-    classes () {
-      return this.$store.state.classes
-    },
     editMode () {
       return this.$store.state.editMode
     },
