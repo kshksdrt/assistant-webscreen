@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import mutations from './mutations'
 
 export default Vuex.createStore({
   state: {
@@ -8,66 +9,83 @@ export default Vuex.createStore({
     userConfig: {
       groups: [
         {
-          name: 'Test group',
-          type: 'icon',
+          name: 'Button group',
+          type: 'buttons',
+          items: [
+            {
+              type: 'svg',
+              icon: 'email',
+              color: 'bg-indigo-500',
+              label: 'Send email',
+              command: 'email'
+            },
+            {
+              type: 'svg',
+              icon: 'alarm',
+              color: 'bg-indigo-500',
+              label: 'Set an alarm',
+              command: 'alarm'
+            },
+          ]
+        },
+        {
+          name: 'Icon group',
+          type: 'icons',
           items: [
             {
               type: 'svg',
               icon: 'face',
+              color: 'bg-indigo-500',
               label: 'testing',
               command: 'Youtube'
+            },
+            {
+              type: 'svg',
+              icon: 'email',
+              color: 'bg-indigo-500',
+              label: 'tgdft',
+              command: 'email'
+            },
+            {
+              type: 'svg',
+              icon: 'edit',
+              color: 'bg-indigo-500',
+              label: 'tgfdhbh',
+              command: 'alarm'
+            },
+            {
+              type: 'svg',
+              icon: 'delete',
+              color: 'bg-indigo-500',
+              label: 'fdhthb',
+              command: 'email'
+            },
+            {
+              type: 'svg',
+              icon: 'remove',
+              color: 'bg-indigo-500',
+              label: 'gyhdtdf',
+              command: 'alarm'
+            },
+            {
+              type: 'svg',
+              icon: 'web',
+              color: 'bg-indigo-500',
+              label: 'gdftbhdf',
+              command: 'email'
+            },
+            {
+              type: 'svg',
+              icon: 'alarm',
+              color: 'bg-indigo-500',
+              label: 'tddddddgf',
+              command: 'alarm'
             },
           ]
         },
       ],
-      gridWidth: 6,
+      gridWidth: 5,
     },
   },
-  mutations: {
-    editToggle (state) {
-      state.editMode = !state.editMode
-    },
-    storeUserConfig (state, payload) {
-      state.userConfig = payload
-    },
-    newGroup (state, payload) {
-      const { name, type } = payload
-      if (state.userConfig.groups == undefined) state.userConfig['groups'] = []
-      state.userConfig.groups.push({name, type, items: []})
-    },
-    removeGroup (state, groupName) {
-      state.userConfig.groups = state.userConfig.groups.filter(x => {
-        return x.name != groupName
-      })
-    },
-    newIcon (state, payload) {
-      const group = state.userConfig.groups.find(x => {
-        return payload.groupName == x.name
-      })
-      group.items.push(payload.iconObject)
-      state.changesSaved = false
-    },
-    removeIcon (state, payload) {
-      let group = state.userConfig.groups.find(x => {
-        return payload.groupName == x.name
-      })
-      group.items = group.items.filter(x => {
-        return x.label != payload.label
-      })
-      state.changesSaved = false
-    },
-    saveChanges (state) {
-      state.changesSaved = true
-    },
-    toggleGridWidth (state) {
-      const gridWidth = state.userConfig['gridWidth']
-      if (!gridWidth) state.userConfig['gridWidth'] = 6
-      if (gridWidth == 6) state.userConfig['gridWidth'] = 5
-      if (gridWidth == 5) state.userConfig['gridWidth'] = 6
-    }
-  },
-  actions: {
-  },
-  modules: {
-  }
+  mutations,
 })

@@ -21,7 +21,7 @@
           <p class="text-md font-bold py-1">Settings</p>
           <div class="grid grid-cols-5 hover:bg-gray-100 pr-2" @click="toggleGridWidth">
             <div class="col-span-4">
-              <p class="text-md py-2">Grid width</p>
+              <p class="text-md py-2">Icons group width</p>
             </div>
             <div class="col-span-1">
               <p class="text-md py-2 text-right">{{userConfig['gridWidth']}}</p>
