@@ -2,6 +2,8 @@
 
 A plugin for Tasker and autotools, to build composable UI to launch apps, shortcuts and tasker tasks. Works completely offline, except for the web search feature.
 
+![preview](https://user-images.githubusercontent.com/34638773/103294170-9de66480-49f1-11eb-8619-ccd38e2c792e.jpg)
+
 ## Setup Instructions
 
 1. Copy the production build("dist" folder contents) to your "Internal Memory/Tasker/Web Screens/Assistant/dist/" folder.
