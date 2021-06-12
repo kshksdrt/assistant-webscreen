@@ -1,4 +1,4 @@
-# Assistant Webscreen
+# Assistant Webscreen (Project has been abandoned)
 
 A plugin for Tasker and autotools, to build composable UI to launch apps, shortcuts and tasker tasks. Works completely offline, except for the web search feature.
 
